@@ -202,7 +202,9 @@ export const codeReview = async (
           warning(
             `Failed to get file contents: ${
               e as string
-            }. This is OK if it's a new file.`
+            }. This is OK if it's a new file.(${
+              file.filename
+            })`
           )
         }
 
