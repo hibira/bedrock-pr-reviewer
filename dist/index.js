@@ -5926,7 +5926,7 @@ const codeReview = async (lightBot, heavyBot, options, prompts) => {
             }
         }
         catch (e) {
-            (0,core.warning)(`Failed to get file contents: ${e}. This is OK if it's a new file.`);
+            (0,core.warning)(`Failed to get file contents: ${e}. This is OK if it's a new file. ${file.filename}`);
         }
         let fileDiff = '';
         if (file.patch != null) {
